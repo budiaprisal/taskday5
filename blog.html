@@ -1,0 +1,320 @@
+<html>
+  <head>
+    <title>Creating Blog Page</title>
+    <link rel="stylesheet" href="blog.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav>
+      <div class="left-side">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="logo" />
+        </a>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="blog.html" class="list-active">My Project</a>
+          </li>
+        </ul>
+      </div>
+      <div class="right-side">
+        <a href="contact.html"> Contact Me </a>
+      </div>
+    </nav>
+
+    <!-- Blog -->
+    <!-- Form -->
+    <div class="blog">
+      <div class="blog-form">
+        <div class="form-container">
+          <form onsubmit="addBlog(event)">
+            <h1>ADD MY PROJECT</h1>
+            <div>
+              <label for="input-blog-title">Project name</label>
+              <input id="input-blog-title" />
+            </div>
+
+            <label for="input-blog-content">Start Date</label>
+            <input type="date" id="start" height="100px" />
+
+            <label for="input-blog-content">End Date</label>
+            <input type="date" id="start" width="100px" />
+            <div>
+              <label for="input-blog-content">Description</label>
+              <textarea id="input-blog-content"></textarea>
+            </div>
+
+            <div>
+              <label for="">Technologies</label><br /><br />
+              <label for="">java</label>
+              <input type="checkbox" id="java" value="java" />
+            </div>
+            <div>
+              <label for="">react</label>
+              <input type="checkbox" id="react" value="react" />
+            </div>
+            <div>
+              <label>Upload Image</label>
+              <div class="input-blog-image-group">
+                <label for="input-blog-image">
+                  <p>Choose</p>
+                  <img src="assets/file.png" alt="file" />
+                </label>
+                <input type="file" id="input-blog-image" hidden />
+              </div>
+            </div>
+            <div class="button-group">
+              <button>Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- start -->
+      <hr class="line" />
+      <div id="contents" class="blog-list">
+        <!-- akhir -->
+        <section class="container card">
+          <div class="testimoni">
+            <div class="testimoni-img">
+              <img src="assets/blog-img-detail.png" alt="" />
+            </div>
+            <!-- akhir -->
+            <div class="blog-content">
+              <a href="blog-detail.html" target="_blank">Pasar Coding di Indonesia Dinilai Masih Menjanjikan</a><br />
+              <div class="detail-blog-content"><span id="tanggalwaktu"></span></p>
+                <script>
+                  var tw = new Date();
+                  if (tw.getTimezoneOffset() == 0) a = tw.getTime() + 7 * 60 * 60 * 1000;
+                  else a = tw.getTime();
+                  tw.setTime(a);
+                  var tahun = tw.getFullYear();
+                  var hari = tw.getDay();
+                  var bulan = tw.getMonth();
+                  var tanggal = tw.getDate();
+                  var hariarray = new Array("Minggu,", "Senin,", "Selasa,", "Rabu,", "Kamis,", "Jum'at,", "Sabtu,");
+                  var bulanarray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "Nopember", "Desember");
+                  document.getElementById("tanggalwaktu").innerHTML =
+                    hariarray[hari] + " " + tanggal + " " + bulanarray[bulan] + " " + tahun + " Jam " + (tw.getHours() < 10 ? "0" : "") + tw.getHours() + ":" + (tw.getMinutes() < 10 ? "0" : "") + tw.getMinutes() + " W.I.B ";
+                </script></div>
+
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, fugit sit nobis quod expedita, error voluptatem id blanditiis eaque iure culpa aliquid mollitia ab iusto eos similique, nisi ex a.</p>
+              <i class="fa-brands fa-node-js"></i>
+              <i class="fa-brands fa-react"></i>
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <div class="btn-group1">
+              <button class="btn-group1">Edit</button>
+              <button class="btn-group1">Delete</button>
+            </div>
+
+           <div style="text-align: right; margin-top: 15px">
+              <span style="font-size: 12px; color: grey"><label id="minutes">00</label>:<label id="seconds">00 </label> Minutes Ago</span>
+             
+            </div>
+            
+          </div>
+          <div class="testimoni">
+            <div class="testimoni-img">
+              <img src="assets/astronaut.jpg" alt="" />
+            </div>
+            <!-- akhir -->
+            <div class="blog-content">
+              <a href="blog-detail.html" target="_blank">Pasar Coding di Indonesia Dinilai Masih Menjanjikan</a><br />
+              <div class="detail-blog-content"><span id="tanggalwaktu"></span></p>
+                <script>
+                  var tw = new Date();
+                  if (tw.getTimezoneOffset() == 0) a = tw.getTime() + 7 * 60 * 60 * 1000;
+                  else a = tw.getTime();
+                  tw.setTime(a);
+                  var tahun = tw.getFullYear();
+                  var hari = tw.getDay();
+                  var bulan = tw.getMonth();
+                  var tanggal = tw.getDate();
+                  var hariarray = new Array("Minggu,", "Senin,", "Selasa,", "Rabu,", "Kamis,", "Jum'at,", "Sabtu,");
+                  var bulanarray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "Nopember", "Desember");
+                  document.getElementById("tanggalwaktu").innerHTML =
+                    hariarray[hari] + " " + tanggal + " " + bulanarray[bulan] + " " + tahun + " Jam " + (tw.getHours() < 10 ? "0" : "") + tw.getHours() + ":" + (tw.getMinutes() < 10 ? "0" : "") + tw.getMinutes() + " W.I.B ";
+                </script></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta labore aperiam natus quisquam sint vero neque adipisci molestias, sed voluptates at dolore? Molestiae beatae incidunt aut unde veritatis fuga ipsa.</p>
+              <i class="fa-brands fa-node-js"></i>
+              <i class="fa-brands fa-react"></i>
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <div class="btn-group1">
+              <button class="btn-group1">Edit</button>
+              <button class="btn-group1">Delete</button>
+            </div>
+
+           <div style="text-align: right; margin-top: 15px">
+              <span style="font-size: 12px; color: grey"><label id="minutes">00</label>:<label id="seconds">00 </label> Minutes Ago</span>
+             
+            </div>
+            
+          </div>
+          <div class="testimoni">
+            <div class="testimoni-img">
+              <img src="assets/astronaut.jpg" alt="" />
+            </div>
+            <!-- akhir -->
+            <div class="blog-content">
+              <a href="blog-detail.html" target="_blank">Pasar Coding di Indonesia Dinilai Masih Menjanjikan</a><br />
+              <div class="detail-blog-content"><span id="tanggalwaktu"></span></p>
+                <script>
+                  var tw = new Date();
+                  if (tw.getTimezoneOffset() == 0) a = tw.getTime() + 7 * 60 * 60 * 1000;
+                  else a = tw.getTime();
+                  tw.setTime(a);
+                  var tahun = tw.getFullYear();
+                  var hari = tw.getDay();
+                  var bulan = tw.getMonth();
+                  var tanggal = tw.getDate();
+                  var hariarray = new Array("Minggu,", "Senin,", "Selasa,", "Rabu,", "Kamis,", "Jum'at,", "Sabtu,");
+                  var bulanarray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "Nopember", "Desember");
+                  document.getElementById("tanggalwaktu").innerHTML =
+                    hariarray[hari] + " " + tanggal + " " + bulanarray[bulan] + " " + tahun + " Jam " + (tw.getHours() < 10 ? "0" : "") + tw.getHours() + ":" + (tw.getMinutes() < 10 ? "0" : "") + tw.getMinutes() + " W.I.B ";
+                </script></div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis architecto sunt, tenetur deserunt suscipit harum asperiores earum rerum optio praesentium magnam laborum sint doloribus dignissimos. Quia sequi autem expedita necessitatibus!</p>
+              <i class="fa-brands fa-node-js"></i>
+              <i class="fa-brands fa-react"></i>
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <div class="btn-group1">
+              <button class="btn-group1">Edit</button>
+              <button class="btn-group1">Delete</button>
+            </div>
+
+           <div style="text-align: right; margin-top: 15px">
+              <span style="font-size: 12px; color: grey"><label id="minutes">00</label>:<label id="seconds">00 </label> Minutes Ago</span>
+             
+            </div>
+            
+          </div>
+          <div class="testimoni">
+            <div class="testimoni-img">
+              <img src="assets/blog-img-detail.png" alt="" />
+            </div>
+            <!-- akhir -->
+            <div class="blog-content">
+              <a href="blog-detail.html" target="_blank">Pasar Coding di Indonesia Dinilai Masih Menjanjikan</a><br />
+              <div class="detail-blog-content"><span id="tanggalwaktu"></span></p>
+                <script>
+                  var tw = new Date();
+                  if (tw.getTimezoneOffset() == 0) a = tw.getTime() + 7 * 60 * 60 * 1000;
+                  else a = tw.getTime();
+                  tw.setTime(a);
+                  var tahun = tw.getFullYear();
+                  var hari = tw.getDay();
+                  var bulan = tw.getMonth();
+                  var tanggal = tw.getDate();
+                  var hariarray = new Array("Minggu,", "Senin,", "Selasa,", "Rabu,", "Kamis,", "Jum'at,", "Sabtu,");
+                  var bulanarray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "Nopember", "Desember");
+                  document.getElementById("tanggalwaktu").innerHTML =
+                    hariarray[hari] + " " + tanggal + " " + bulanarray[bulan] + " " + tahun + " Jam " + (tw.getHours() < 10 ? "0" : "") + tw.getHours() + ":" + (tw.getMinutes() < 10 ? "0" : "") + tw.getMinutes() + " W.I.B ";
+                </script></div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, recusandae voluptate! Itaque animi atque distinctio ullam expedita, ratione quis! Dolorem, eos! Beatae perspiciatis ipsa in sapiente optio placeat dicta tempora?</p>
+              <i class="fa-brands fa-node-js"></i>
+              <i class="fa-brands fa-react"></i>
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <div class="btn-group1">
+              <button class="btn-group1">Edit</button>
+              <button class="btn-group1">Delete</button>
+            </div>
+
+           <div style="text-align: right; margin-top: 15px">
+              <span style="font-size: 12px; color: grey"><label id="minutes">00</label>:<label id="seconds">00 </label> Minutes Ago</span>
+             
+            </div>
+            
+          </div>
+          <div class="testimoni">
+            <div class="testimoni-img">
+              <img src="assets/blog-img-detail.png" alt="" />
+            </div>
+            <!-- akhir -->
+            <div class="blog-content">
+              <a href="blog-detail.html" target="_blank">Pasar Coding di Indonesia Dinilai Masih Menjanjikan</a><br />
+              <div class="detail-blog-content"><span id="tanggalwaktu"></span></p>
+                <script>
+                  var tw = new Date();
+                  if (tw.getTimezoneOffset() == 0) a = tw.getTime() + 7 * 60 * 60 * 1000;
+                  else a = tw.getTime();
+                  tw.setTime(a);
+                  var tahun = tw.getFullYear();
+                  var hari = tw.getDay();
+                  var bulan = tw.getMonth();
+                  var tanggal = tw.getDate();
+                  var hariarray = new Array("Minggu,", "Senin,", "Selasa,", "Rabu,", "Kamis,", "Jum'at,", "Sabtu,");
+                  var bulanarray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "Nopember", "Desember");
+                  document.getElementById("tanggalwaktu").innerHTML =
+                    hariarray[hari] + " " + tanggal + " " + bulanarray[bulan] + " " + tahun + " Jam " + (tw.getHours() < 10 ? "0" : "") + tw.getHours() + ":" + (tw.getMinutes() < 10 ? "0" : "") + tw.getMinutes() + " W.I.B ";
+                </script></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae tempora nemo totam numquam adipisci a, et blanditiis ipsa iusto excepturi unde incidunt explicabo magnam fugiat vel fugit similique perspiciatis! Qui!</p>
+              <i class="fa-brands fa-node-js"></i>
+              <i class="fa-brands fa-react"></i>
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <div class="btn-group1">
+              <button class="btn-group1">Edit</button>
+              <button class="btn-group1">Delete</button>
+            </div>
+
+           <div style="text-align: right; margin-top: 15px">
+              <span style="font-size: 12px; color: grey"><label id="minutes">00</label>:<label id="seconds">00 </label> Minutes Ago</span>
+             
+            </div>
+            
+          </div>
+          <div class="testimoni">
+            <div class="testimoni-img">
+              <img src="assets/blog-img-detail.png" alt="" />
+            </div>
+            <!-- akhir -->
+            <div class="blog-content">
+              <a href="blog-detail.html" target="_blank">Pasar Coding di Indonesia Dinilai Masih Menjanjikan</a><br />
+              <div class="detail-blog-content"><span id="tanggalwaktu"></span></p>
+                <script>
+                  var tw = new Date();
+                  if (tw.getTimezoneOffset() == 0) a = tw.getTime() + 7 * 60 * 60 * 1000;
+                  else a = tw.getTime();
+                  tw.setTime(a);
+                  var tahun = tw.getFullYear();
+                  var hari = tw.getDay();
+                  var bulan = tw.getMonth();
+                  var tanggal = tw.getDate();
+                  var hariarray = new Array("Minggu,", "Senin,", "Selasa,", "Rabu,", "Kamis,", "Jum'at,", "Sabtu,");
+                  var bulanarray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "Nopember", "Desember");
+                  document.getElementById("tanggalwaktu").innerHTML =
+                    hariarray[hari] + " " + tanggal + " " + bulanarray[bulan] + " " + tahun + " Jam " + (tw.getHours() < 10 ? "0" : "") + tw.getHours() + ":" + (tw.getMinutes() < 10 ? "0" : "") + tw.getMinutes() + " W.I.B ";
+                </script></div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum iste ipsam at eum odit, totam sed, impedit aut enim tenetur in. Id quos veritatis molestias deleniti quis enim fuga pariatur!</p>
+              <i class="fa-brands fa-node-js"></i>
+              <i class="fa-brands fa-react"></i>
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <div class="btn-group1">
+              <button class="btn-group1">Edit</button>
+              <button class="btn-group1">Delete</button>
+            </div>
+
+           <div style="text-align: right; margin-top: 15px">
+              <span style="font-size: 12px; color: grey"><label id="minutes">00</label>:<label id="seconds">00 </label> Minutes Ago</span>
+            </div>
+            
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="blog.js"></script>
+  </body>
+</html>
